@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Checkbox</title>
+</head>
+<body>
+	<h2 id="English"></h2>
+	<h2 id="Telugu"></h2>
+	<h2 id="Hindi"></h2>
+	<input id="English_box" type="checkbox" onchange="display('English')">English</input>
+	
+	<input id="Telugu_box" type="checkbox" onchange="display('Telugu')">Telugu</input>
+	
+	<input id="Hindi_box" type="checkbox" onchange="display('Hindi')">Hindi</input>
+
+	<script type="text/javascript">
+		function display(check){
+			var box = document.getElementById(check+"_box");
+			var elem = document.getElementById(check);
+			if(box.checked == true){
+				elem.innerHTML = check;
+			}
+			else{
+				elem.innerHTML = "";
+			}
+		}
+		
+	</script>
+	
+</body>
+</html>
